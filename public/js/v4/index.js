@@ -1,6 +1,11 @@
-import 'chart.js/Chart';
-import 'jquery/dist/jquery';
-import 'jquery-ui-dist/jquery-ui';
+// Vendor libraries
+import 'chart.js';
+import './src/jQuery';
+import 'jquery-ui/dist/jquery-ui';
 import 'tablesorter/dist/js/jquery.tablesorter';
-import 'tether/dist/js/tether';
-import 'bootstrap/dist/js/bootstrap';
+import 'tether';
+import 'bootstrap';
+
+// Application
+import './src/application';
+import './src/nibiru-debug';

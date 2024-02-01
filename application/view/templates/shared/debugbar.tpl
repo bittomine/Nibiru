@@ -1,9 +1,4 @@
 {if $debuging==true}
-    <script>
-        $( function() {
-            $( "#tabs" ).tabs();
-        } );
-    </script>
 <div id="nibiru-bar-open" class="closed">
     <span class="nibiru-bar-logo"></span>
     <p>{$ndbinfo}</p>

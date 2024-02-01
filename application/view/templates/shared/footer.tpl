@@ -1,13 +1,11 @@
 {foreach item=script from=$js}
-    <script src="{$script}"></script>
+    {if strpos($script, '?type=es5') !== false}
+        <script nomodule src="{$script|replace:'?type=es5':''}"></script>
+    {elseif strpos($script, '?type=es6') !== false}
+        <script type="module" src="{$script|replace:'?type=es6':''}"></script>
+    {else}
+        <script src="{$script}"></script>
+    {/if}
 {/foreach}
-<script>
-    // execute/clear BS loaders for docs
-    $(function(){
-        while( window.BS&&window.BS.loader&&window.BS.loader.length )
-        {
-            (window.BS.loader.pop())()
-        }
-    })
-</script>
+
 {include file="./debugbar.tpl"}

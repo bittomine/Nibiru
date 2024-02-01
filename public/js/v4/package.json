@@ -4,12 +4,15 @@
   "description": "MMVC PHP Framework for rapid prototyping",
   "main": "index.js",
   "scripts": {
+    "bundle": "npm run bundle:rollup && npm run bundle:webpack",
     "bundle:rollup": "npm run bundle:rollup:dev && npm run bundle:rollup:prod",
     "bundle:rollup:dev": "rollup -c build/rollup.dev.js",
     "bundle:rollup:prod": "rollup -c build/rollup.prod.js",
+    "bundle:rollup:watch": "rollup -c build/rollup.dev.js --watch",
     "bundle:webpack": "npm run bundle:webpack:dev && npm run bundle:webpack:prod",
     "bundle:webpack:dev": "webpack --config build/webpack.dev.js",
     "bundle:webpack:prod": "webpack --config build/webpack.prod.js",
+    "bundle:webpack:watch": "webpack --config build/webpack.dev.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -40,12 +43,12 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "bootstrap": "~3.3.6",
-    "chart.js": "~1.0.2",
-    "jquery": "~2.1.4",
-    "jquery-ui-dist": "~1.12.1",
+    "bootstrap": "~5.3.2",
+    "chart.js": "~4.4.1",
+    "jquery": "~3.7.1",
+    "jquery-ui": "~1.13.2",
     "tablesorter": "~2.31.3",
-    "tether": "~1.3.7"
+    "tether": "~2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",
@@ -53,6 +56,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/jquery": "^3.5.29",
     "@types/webpack": "^5.28.5",
     "babel-loader": "^9.1.3",
     "rollup": "^2.56.3",

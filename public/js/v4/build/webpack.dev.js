@@ -1,4 +1,5 @@
-const path = require('path');
+const path    = require('path');
+const webpack = require('webpack');
 
 /**
  * @see https://webpack.js.org/configuration/
@@ -15,6 +16,12 @@ module.exports = [{
     resolve: {
         extensions: ['.js'],
     },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $     : 'jquery',
+            jQuery: 'jquery',
+        }),
+    ],
 }, {
     mode   : 'development',
     entry  : './index.js',
@@ -26,6 +33,12 @@ module.exports = [{
     resolve: {
         extensions: ['.js'],
     },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $     : 'jquery',
+            jQuery: 'jquery',
+        }),
+    ],
     module : {
         rules: [
             {
@@ -34,10 +47,10 @@ module.exports = [{
                 use    : {
                     loader : 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            }
+                        presets: ['@babel/preset-env'],
+                    },
+                },
+            },
         ],
     },
 }];

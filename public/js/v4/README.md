@@ -44,7 +44,7 @@ The project uses a dual bundling strategy to create two separate JavaScript bund
 Depending on the browser's capabilities, the corresponding JavaScript bundle is loaded:
 
 ```html
-<script type="module" src="/public/js/v4/bundle.es6.min.js"></script>
 <script nomodule src="/public/js/v4/bundle.es5.min.js"></script>
+<script type="module" src="/public/js/v4/bundle.es6.min.js"></script>
 ```
 Here, the `type="module"` attribute interprets the script as an ES6 module. Conversely, the `nomodule` attribute prevents the script from loading in browsers that support the `type="module"` attribute.

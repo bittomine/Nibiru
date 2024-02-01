@@ -1,18 +1,26 @@
-// rollup.prod.js
+import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
-import {terser} from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 
+/**
+ * @see https://rollupjs.org/guide/en/
+ * @type {import('rollup').RollupOptions[]}
+ */
 const config = [{
     input  : 'index.js',
     output : {
-        file  : 'dist/rollup/bundle.es5.min.js',
-        format: 'iife',
-        name  : 'library'
+        file   : 'dist/rollup/bundle.es5.min.js',
+        format : 'iife',
+        name   : 'library',
+        globals: {
+            jquery: ['$', 'jQuery'],
+        },
     },
     plugins: [
-        resolve(),
+        nodeResolve({
+            browser: true,
+        }),
         commonjs(),
         babel({
             babelHelpers: 'bundled',
@@ -20,22 +28,27 @@ const config = [{
                 "@babel/preset-env",
                 {
                     "targets": {
-                        "browsers": ["last 2 versions", "ie >= 11"]
-                    }
-                }]]
+                        "browsers": ["last 2 versions", "ie >= 11"],
+                    },
+                }]],
         }),
-        terser() // Minify the js code
-    ]
+        terser(), // Minify the js code
+    ],
 }, { // ES6 config
     input  : 'index.js',
     output : {
-        file  : 'dist/rollup/bundle.es6.min.js',
-        format: 'esm',
+        file   : 'dist/rollup/bundle.es6.min.js',
+        format : 'esm',
+        globals: {
+            jquery: ['$', 'jQuery'],
+        },
     },
     plugins: [
-        resolve(),
+        nodeResolve({
+            browser: true,
+        }),
         commonjs(),
-        terser() // Minify the js code
-    ]
+        terser(), // Minify the js code
+    ],
 }];
 export default config;
