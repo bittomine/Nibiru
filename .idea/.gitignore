@@ -1,0 +1,45 @@
+# Default ignored files
+webServers.xml
+workspace.xml
+modules
+modules.xml
+
+# User-specific stuff
+deployment.xml
+tasks.xml
+usage.statistics.xml
+dictionaries
+shelf
+artifacts
+cssxfire.xml
+jpa-buddy-datasource.xml
+git_toolbox_prj.xml
+remote-targets.xml
+
+# Generated files
+contentModel.xml
+
+# Sensitive or high-churn files
+dataSources/
+*.ids
+*.local.*
+sqlDataSources.xml
+dynamic.xml
+uiDesigner.xml
+dbnavigator.xml
+
+# Gradle
+gradle.xml
+libraries.bak
+
+# Mongo Explorer plugin
+mongoSettings.xml
+
+# Cursive Clojure plugin
+replstate.xml
+
+# Editor-based Rest Client
+httpRequests
+
+# Android studio 3.1+ serialized cache file
+caches/build_file_checksums.ser
