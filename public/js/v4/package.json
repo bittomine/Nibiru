@@ -1,0 +1,63 @@
+{
+  "name": "nibiru",
+  "version": "1.0.0",
+  "description": "MMVC PHP Framework for rapid prototyping",
+  "main": "index.js",
+  "scripts": {
+    "bundle:rollup": "npm run bundle:rollup:dev && npm run bundle:rollup:prod",
+    "bundle:rollup:dev": "rollup -c build/rollup.dev.js",
+    "bundle:rollup:prod": "rollup -c build/rollup.prod.js",
+    "bundle:webpack": "npm run bundle:webpack:dev && npm run bundle:webpack:prod",
+    "bundle:webpack:dev": "webpack --config build/webpack.dev.js",
+    "bundle:webpack:prod": "webpack --config build/webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alllinux/Nibiru.git"
+  },
+  "keywords": [
+    "mmvc",
+    "php",
+    "framework",
+    "rapid",
+    "prototyping"
+  ],
+  "author": "Stephan Kasdorf <skasdorf@alllinux.de>",
+  "contributors": [
+    {
+      "name": "Christian Kusmanow",
+      "email": "christian.kusmanow@teslasoft.de"
+    }
+  ],
+  "license": "BSD-4-Clause",
+  "bugs": {
+    "url": "https://github.com/alllinux/Nibiru/issues"
+  },
+  "homepage": "https://github.com/alllinux/Nibiru#readme",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "chart.js": "~1.0.2",
+    "jquery": "~2.1.4",
+    "jquery-ui-dist": "~1.12.1",
+    "tablesorter": "~2.31.3",
+    "tether": "~1.3.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/webpack": "^5.28.5",
+    "babel-loader": "^9.1.3",
+    "rollup": "^2.56.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
