@@ -1,0 +1,156 @@
+/**
+ * Nibiru Debugbar styles
+ */
+#nibiru-debug {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  background-color: white;
+  bottom: -300px;
+  display: flex;
+  flex-direction: column;
+  /*transition: bottom 0.5s; /* smooth transition */
+  @apply fixed;
+  &.down {
+    /*bottom: -300px !important;*/
+  }
+
+  &.up {
+    /*bottom: 0px !important;*/
+  }
+}
+
+#tabs {
+  flex-grow: 1;
+
+  & > div {
+    overflow-y: scroll;
+    max-height: 250px;
+  }
+}
+
+#nibiru-bar-open {
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 25px;
+  cursor: pointer;
+  background-color: #181818;
+
+  &.closed {
+  }
+
+  &.open {
+  }
+}
+
+span.nibiru-bar-logo {
+  position: relative;
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  background-image: url("/public/img/logos/nibiru-bar-logo.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#tabs-10 {
+  h1, h2, h3, td, th, p {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 0.9em;
+    margin: 1px;
+    padding: 0;
+  }
+
+  h1 {
+    margin: 0;
+    text-align: left;
+    padding: 2px;
+    background-color: #f0c040;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  h2 {
+    background-color: #9B410E;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    padding: 2px;
+    border-top: 1px solid black;
+  }
+
+  h3 {
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    font-size: 0.7em;
+    padding: 2px;
+  }
+
+  p, table {
+    background: #f0ead8;
+  }
+
+  p {
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    font-family: monospace;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  td {
+    color: green;
+  }
+
+  &.odd {
+    background-color: #eeeeee;
+  }
+
+  &.even {
+    background-color: #fafafa;
+  }
+
+  &.exectime {
+    font-size: 0.8em;
+    font-style: italic;
+  }
+
+  #bold div {
+    color: black;
+    font-weight: bold;
+  }
+
+  #blue h3 {
+    color: blue;
+  }
+
+  #normal div {
+    color: black;
+    font-weight: normal;
+  }
+}
+
+#tabs-5#table_config_vars th {
+  color: maroon;
+}

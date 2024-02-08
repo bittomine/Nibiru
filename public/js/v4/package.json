@@ -13,6 +13,11 @@
     "bundle:webpack:dev": "webpack --config build/webpack.dev.js",
     "bundle:webpack:prod": "webpack --config build/webpack.prod.js",
     "bundle:webpack:watch": "webpack --config build/webpack.dev.js --watch",
+    "build:sass": "sass index.scss | postcss --config postcss.config.js > ../../css/v4/styles.css",
+    "build:sass:min": "sass index.scss | NODE_ENV=production npx postcss > ../../css/v4/styles.min.css",
+    "build:css:watch": "chokidar '../../css/v4/styles.css' -c 'postcss --config postcss.config.js ../../css/v4/styles.css -o ../../css/v4/styles.css'",
+    "build:sass:watch": "sass --watch index.scss:../../css/v4/styles.css",
+    "watch": "npm-run-all --parallel build:sass:watch build:css:watch bundle:webpack:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -43,7 +48,7 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "bootstrap": "~5.3.2",
+    "bootstrap": "^5.3.2",
     "chart.js": "~4.4.1",
     "jquery": "~3.7.1",
     "jquery-ui": "~1.13.2",
@@ -58,9 +63,18 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/jquery": "^3.5.29",
     "@types/webpack": "^5.28.5",
+    "autoprefixer": "^10.4.17",
     "babel-loader": "^9.1.3",
+    "bootstrap-sass": "^3.4.3",
+    "chokidar-cli": "^3.0.0",
+    "cssnano": "^6.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
     "rollup": "^2.56.3",
     "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.70.0",
+    "tailwindcss": "^3.4.1",
     "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4"
   }

@@ -176,6 +176,7 @@ td,
 th {
   padding: 0;
 }
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -247,6 +248,8 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+
+/** Bootstrap **/
 * {
   box-sizing: border-box;
 }
@@ -6283,6 +6286,8 @@ body {
   right: 50%;
   margin-right: -10px;
 }
+
+/** Icons **/
 .icon-500px-with-circle:before {
   content: "\EA01";
 }
@@ -7522,6 +7527,8 @@ body {
 .icon-youtube:before {
   content: "\EB9D";
 }
+
+/** Layout **/
 .flextable {
   dislay: table;
   width: 100%;
@@ -7759,6 +7766,8 @@ body {
   color: inherit;
   text-decoration: inherit;
 }
+
+/** Date Picker **/
 .datepicker {
   padding: 4px;
   border-radius: 4px;
@@ -8652,6 +8661,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   cursor: default;
   background-color: transparent;
 }
+
+/** Input **/
 .input-group.date .input-group-addon {
   cursor: pointer;
 }
@@ -8682,6 +8693,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   margin-left: -5px;
   margin-right: -5px;
 }
+
+/** Table **/
 .table .header {
   padding-right: 20px;
   font-weight: 300;
@@ -8715,6 +8728,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 .headerSortDown:after {
   border-bottom: 4px solid;
 }
+
+/** Nav **/
 .nav-toggler {
   display: block;
   width: 40px;
@@ -8771,6 +8786,8 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
     height: auto !important;
   }
 }
+
+/** Stat List **/
 .statlist {
   margin-bottom: 20px;
   padding-left: 0;
@@ -9116,6 +9133,8 @@ canvas {
   left: 10px;
   color: #ccc;
 }
+
+/** Sidebar **/
 .sidebar .nav-toggleable-sm.in,
 .sidebar .nav-toggleable-md.in {
   padding-bottom: 20px;
@@ -9198,6 +9217,8 @@ canvas {
     margin-right: 40px;
   }
 }
+
+/** Iconav **/
 .iconav {
   margin-top: -20px;
   margin-bottom: 30px;
@@ -9324,6 +9345,8 @@ canvas {
     white-space: nowrap;
   }
 }
+
+/** Dashhead **/
 .dashhead:before,
 .dashhead:after {
   content: " ";
@@ -9412,6 +9435,8 @@ canvas {
     margin-left: 0;
   }
 }
+
+/** Button **/
 .btn-pill {
   padding-left: 1.25em;
   padding-right: 1.25em;
