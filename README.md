@@ -86,9 +86,54 @@ The generated module will have its own directory structure, encompassing traits,
 
 This modular approach allows for clear separation of concerns and promotes scalability and maintainability of the application.
 
+# Client-Side Development
+
+## Development Environment
+
+```shell
+npm install
+npm run watch
+```
+
+## Building the project
+
+To build the project, use the following npm scripts:
+
+For development:
+
+```shell
+npm run build:dev
+```
+
+For production:
+
+```shell
+npm run build:prod
+```
+
+## Dual Bundling Strategy
+
+The project uses a dual bundling strategy to create two separate JavaScript bundles: one with modern ES6
+features (`bundle.es6.min.js`), and one transpiled to ES5 for legacy browser support (`bundle.es5.min.js`).
+
+## Importing the Correct Bundle
+
+Depending on the browser's capabilities, the corresponding JavaScript bundle is loaded:
+
+```html
+
+<script nomodule src="/public/js/v4/bundle.es5.min.js"></script>
+<script type="module" src="/public/js/v4/bundle.es6.min.js"></script>
+```
+
+Here, the `type="module"` attribute interprets the script as an ES6 module. Conversely, the `nomodule` attribute
+prevents the script from loading in browsers that support the `type="module"` attribute.
+
 ## Credits
 
 Created by Stephan Kasdorf, 2023
+
+Contributed by Christian Kusmanow, 2024
 
 ---
 
