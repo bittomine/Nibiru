@@ -13,5 +13,5 @@ $link-hover-color: #137499;
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Nibiru
-@import "../../css/v3/application";
-@import "../../css/v3/nibiru-debug";
+@import "application/view/templates/index";
+@import "application/view/templates/shared/debugbar";

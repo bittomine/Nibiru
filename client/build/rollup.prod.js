@@ -3,14 +3,15 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 
+
 /**
  * @see https://rollupjs.org/guide/en/
  * @type {import('rollup').RollupOptions[]}
  */
 const config = [{
-    input  : 'index.js',
+    input  : 'client/index.js',
     output : {
-        file   : 'dist/rollup/bundle.es5.min.js',
+        file: 'public/js/v4/rollup/bundle.es5.min.js',
         format : 'iife',
         name   : 'library',
         globals: {
@@ -35,9 +36,9 @@ const config = [{
         terser(), // Minify the js code
     ],
 }, { // ES6 config
-    input  : 'index.js',
+    input  : 'client/index.js',
     output : {
-        file   : 'dist/rollup/bundle.es6.min.js',
+        file: 'public/js/v4/rollup/bundle.es6.min.js',
         format : 'esm',
         globals: {
             jquery: ['$', 'jQuery'],

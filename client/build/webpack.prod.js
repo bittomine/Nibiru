@@ -2,17 +2,19 @@ const path         = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack      = require("webpack");
 
+const outputPath = path.resolve(__dirname, '..', '..', 'public', 'js', 'v4', 'webpack');
+
 /**
  * @see https://webpack.js.org/configuration/
  * @type {webpack.Configuration[]}
  */
 module.exports = [{
     mode        : 'production',
-    entry       : './index.js',
+    entry       : './client/index.js',
     devtool     : false,
     output      : {
         filename: 'bundle.es6.min.js',
-        path    : path.resolve(__dirname, '..', 'dist', 'webpack'),
+        path: outputPath,
     },
     resolve     : {
         extensions: ['.js'],
@@ -29,11 +31,11 @@ module.exports = [{
     },
 }, {
     mode        : 'production',
-    entry       : './index.js',
+    entry       : './client/index.js',
     devtool     : false,
     output      : {
         filename: 'bundle.es5.min.js',
-        path    : path.resolve(__dirname, '..', 'dist', 'webpack'),
+        path: outputPath,
     },
     resolve     : {
         extensions: ['.js'],

@@ -1,2 +1,4 @@
-public/css/v4/*
 core/l/*
+node_modules
+public/css/v4/*
+public/js/v4/*

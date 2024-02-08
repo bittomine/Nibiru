@@ -8,9 +8,9 @@ import babel from '@rollup/plugin-babel';
  * @type {import('rollup').RollupOptions[]}
  */
 const config = [{
-    input  : 'index.js',
+    input  : 'client/index.js',
     output : {
-        file     : 'dist/rollup/bundle.es5.js',
+        file: 'public/js/v4/rollup/bundle.es5.js',
         format   : 'iife',
         name     : 'library',
         sourcemap: true,
@@ -36,9 +36,9 @@ const config = [{
         }),
     ],
 }, { // ES6 config
-    input  : 'index.js',
+    input  : 'client/index.js',
     output : {
-        file     : 'dist/rollup/bundle.es6.js',
+        file: 'public/js/v4/rollup/bundle.es6.js',
         format   : 'esm',
         sourcemap: true,
         globals  : {

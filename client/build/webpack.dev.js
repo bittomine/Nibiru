@@ -1,17 +1,19 @@
 const path    = require('path');
 const webpack = require('webpack');
 
+const outputPath = path.resolve(__dirname, '..', '..', 'public', 'js', 'v4', 'webpack');
+
 /**
  * @see https://webpack.js.org/configuration/
  * @type {webpack.Configuration[]}
  */
 module.exports = [{
     mode   : 'development',
-    entry  : './index.js',
+    entry  : './client/index.js',
     devtool: 'source-map',
     output : {
         filename: 'bundle.es6.js',
-        path    : path.resolve(__dirname, '..', 'dist', 'webpack'),
+        path: outputPath,
     },
     resolve: {
         extensions: ['.js'],
@@ -24,11 +26,11 @@ module.exports = [{
     ],
 }, {
     mode   : 'development',
-    entry  : './index.js',
+    entry  : './client/index.js',
     devtool: 'source-map',
     output : {
         filename: 'bundle.es5.js',
-        path    : path.resolve(__dirname, '..', 'dist', 'webpack'),
+        path: outputPath,
     },
     resolve: {
         extensions: ['.js'],
