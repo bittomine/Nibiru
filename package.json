@@ -1,5 +1,5 @@
 {
-  "name": "nibiru",
+  "name": "@nibiru/nibiru-framework",
   "version": "1.0.0",
   "description": "MMVC PHP Framework for rapid prototyping",
   "main": "client/index.js",
@@ -10,12 +10,12 @@
     "bundle:rollup:prod": "rollup -c client/build/rollup.prod.js",
     "bundle:rollup:watch": "rollup -c client/build/rollup.dev.js --watch",
     "bundle:webpack": "npm run bundle:webpack:dev && npm run bundle:webpack:prod",
-    "bundle:webpack:dev": "webpack --config client/build/webpack.dev.js",
-    "bundle:webpack:prod": "webpack --config client/build/webpack.prod.js",
-    "bundle:webpack:watch": "webpack --config client/build/webpack.dev.js --watch",
-    "build:sass": "sass index.scss | postcss --config postcss.config.js > public/css/v4/styles.css",
+    "bundle:webpack:dev": "webpack -c client/build/webpack.dev.js",
+    "bundle:webpack:prod": "webpack -c client/build/webpack.prod.js",
+    "bundle:webpack:watch": "webpack -c client/build/webpack.dev.js --watch",
+    "build:sass": "sass index.scss | postcss > public/css/v4/styles.css",
     "build:sass:min": "sass index.scss | NODE_ENV=production npx postcss > public/css/v4/styles.min.css",
-    "build:css:watch": "chokidar 'public/css/v4/styles.css' -c 'postcss --config postcss.config.js public/css/v4/styles.css -o public/css/v4/styles.css'",
+    "build:css:watch": "chokidar 'public/css/v4/styles.css' -c 'postcss public/css/v4/styles.css -o public/css/v4/styles.css'",
     "build:sass:watch": "sass --watch index.scss:public/css/v4/styles.css",
     "build": "npm-run-all build:sass bundle:webpack",
     "build:dev": "npm-run-all build:sass bundle:webpack:dev",
@@ -28,11 +28,15 @@
     "url": "git+https://github.com/alllinux/Nibiru.git"
   },
   "keywords": [
-    "mmvc",
     "php",
-    "framework",
-    "rapid",
-    "prototyping"
+    "mvc",
+    "prototyping",
+    "nibiru",
+    "template-engine",
+    "database",
+    "navigation",
+    "router",
+    "rapid"
   ],
   "author": "Stephan Kasdorf <skasdorf@alllinux.de>",
   "contributors": [

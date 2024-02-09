@@ -1,4 +1,6 @@
 core/l/*
 node_modules
 public/css/v4/*
+!public/css/v4/.gitkeep
 public/js/v4/*
+!public/js/v4/.gitkeep
